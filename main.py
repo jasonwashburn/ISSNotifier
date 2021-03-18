@@ -1,5 +1,4 @@
 import smtplib
-
 import requests
 from datetime import datetime
 import config
