@@ -36,9 +36,6 @@ def is_dark(lat, long):
     sunset_hour_utc = int(data["results"]["sunset"].split("T")[1].split(":")[0])
 
     time_now_utc = datetime.utcnow()
-    print(f"time_now_utc.hour: {time_now_utc.hour}")
-    print(f"sunset_hour: {sunset_hour_utc}, sunrise_hour: {sunrise_hour_utc}")
-    print(f"astro_end: {astro_twilight_end_utc}, astro_begin: {astro_twilight_begin_utc}")
 
     if astro_twilight_end_utc <= time_now_utc.hour <= astro_twilight_begin_utc:
         return True
@@ -46,8 +43,8 @@ def is_dark(lat, long):
         return False
 
 
-print(iss_within_five_deg(lat=MY_LAT, long=MY_LONG))
-print(is_dark(lat=MY_LAT, long=MY_LONG))
+print(f"ISS Within 5 degrees lat or long? {iss_within_five_deg(lat=MY_LAT, long=MY_LONG)}")
+print(f"Is dark outside? {is_dark(lat=MY_LAT, long=MY_LONG)}")
 #If the ISS is close to my current position
 # and it is currently dark
 # Then send me an email to tell me to look up.
