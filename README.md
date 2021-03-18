@@ -1,7 +1,7 @@
 # ISS Notifier
 
 A python script that uses the gmail smtp server to automatically notify you when the International Space Station is 
-overhead (within 5 degrees latitude or longitude) and it's dark (between the ending and beginning of astrological 
+overhead (within 5 degrees latitude or longitude) and it's dark outside (between the ending and beginning of astrological 
 twilight)
 
 **Uses**:
